@@ -29,6 +29,7 @@ example {r s : ℚ} (h1 : s + 3 ≥ r) (h2 : s + r ≤ 3) : r ≤ 3 :=
 example {x y : ℝ} (h1 : y ≤ x + 5) (h2 : x ≤ -2) : x + y < 2 :=
   sorry
 
+
 -- Example 1.4.4
 -- Exercise: replace the words "sorry" with the correct Lean justification.
 example {u v x y A B : ℝ} (h1 : 0 < A) (h2 : A ≤ 1) (h3 : 1 ≤ B) (h4 : x ≤ B)
@@ -59,7 +60,7 @@ example {t : ℚ} (ht : t ≥ 10) : t ^ 2 - 3 * t - 17 ≥ 5 :=
 example {n : ℤ} (hn : n ≥ 5) : n ^ 2 > 2 * n + 11 :=
   sorry
 
--- Example 1.4.7
+-- Example 1.4.7 (check the book to see intro to tactic "extra")
 example {m n : ℤ} (h : m ^ 2 + n ≤ 2) : n ≤ 2 :=
   calc
     n ≤ m ^ 2 + n := by extra
@@ -70,7 +71,7 @@ example {m n : ℤ} (h : m ^ 2 + n ≤ 2) : n ≤ 2 :=
 -- Exercise: replace the words "sorry" with the correct Lean justification.
 example {x y : ℝ} (h : x ^ 2 + y ^ 2 ≤ 1) : (x + y) ^ 2 < 3 :=
   calc
-    (x + y) ^ 2 ≤ (x + y) ^ 2 + (x - y) ^ 2 := by sorry
+    (x + y) ^ 2 ≤ (x + y) ^ 2 + (x - y) ^ 2 := by extra
     _ = 2 * (x ^ 2 + y ^ 2) := by sorry
     _ ≤ 2 * 1 := by sorry
     _ < 3 := by sorry
@@ -88,7 +89,7 @@ example {a b : ℚ} (h1 : a ≥ 0) (h2 : b ≥ 0) (h3 : a + b ≤ 8) :
     _ ≤ 7 * b + 9 * 8 := by sorry
     _ = 7 * b + 72 := by sorry
 
--- Example 1.4.10
+-- Example 1.4.10 (check out book to learn more about this one)
 example {a b c : ℝ} :
     a ^ 2 * (a ^ 6 + 8 * b ^ 3 * c ^ 3) ≤ (a ^ 4 + b ^ 4 + c ^ 4) ^ 2 :=
   calc
@@ -104,24 +105,31 @@ example {a b c : ℝ} :
 Solve these problems yourself.  You may find it helpful to solve them on paper before typing them
 up in Lean. -/
 
-
+--Ex 1
 example {x y : ℤ} (h1 : x + 3 ≥ 2 * y) (h2 : 1 ≤ y) : x ≥ -1 :=
-  sorry
+ sorry
 
+
+--Ex 2
 example {a b : ℚ} (h1 : 3 ≤ a) (h2 : a + 2 * b ≥ 4) : a + b ≥ 3 :=
   sorry
 
+--Ex 3
 example {x : ℤ} (hx : x ≥ 9) : x ^ 3 - 8 * x ^ 2 + 2 * x ≥ 3 :=
   sorry
 
+--Ex 4
 example {n : ℤ} (hn : n ≥ 10) : n ^ 4 - 2 * n ^ 2 > 3 * n ^ 3 :=
   sorry
 
+--Ex 5
 example {n : ℤ} (h1 : n ≥ 5) : n ^ 2 - 2 * n + 3 > 14 :=
   sorry
 
+--Ex 6
 example {x : ℚ} : x ^ 2 - 2 * x ≥ -1 :=
   sorry
 
+--Ex 7
 example (a b : ℝ) : a ^ 2 + b ^ 2 ≥ 2 * a * b :=
   sorry
